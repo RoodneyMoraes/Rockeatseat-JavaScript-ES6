@@ -50,13 +50,13 @@ ViaCep.getDataCep('0s8654');
 // CONVERTENDO PARA ASYNC AND AWAIT
 const buscaUsuario = async (user) => {
     try {
-        const res = axios.get(`https://api.github.com/users/${user}`);
-        console.log(res);
+        const {data} = await axios.get(`https://api.github.com/users/${user}`);
+        console.log(data);
     } catch (error) {
         console.warn("Usuário não existe");
     }
 }
 
 // CHAMANDO A FUNÇÃO
-buscaUsuario('diego3DSADg');
+buscaUsuario('RoodneyMoraes');
 
